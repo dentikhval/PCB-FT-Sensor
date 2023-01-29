@@ -1,0 +1,62 @@
+Project-specific parts:
+
+BF-350 noname strain gauge:
+4pcs/lot BF350 Pressure Resistance Strain Gauge High Precision Weighing Sensor
+8 sets of 4, 32 total
+https://www.ebay.com/itm/253079906304
+
+HX711 SOP16:
+10 PCS HX711 AVIA SOP16 Weighing sensor chip NEW
+4 pcs
+https://www.ebay.com/itm/401053573461
+
+10K NTC 0805 SMD:
+4 pcs
+https://www.digikey.com/en/products/detail/shenzhen-sunlord-electronics-co-ltd/SDNT2012X103F3950FTF/14119942
+
+3.3uh 0805 SMD Inductor
+4 pcs
+https://www.digikey.com/en/products/detail/delta-electronics-components/0805CT-332EJFS/9764097
+
+MMBT4403 PNP Transistor 40V 0.6A SOT23-3
+4 pcs
+https://www.digikey.com/en/products/detail/diodes-incorporated/MMBT4403-7-F/775739
+
+Blue Pill board:
+STM32F103C8T6 Board
+1 pc
+https://www.ebay.com/sch/i.html?_nkw=STM32F103C8T6+blue+pill
+
+3A Buck DC-DC converter:
+2 pcs
+Choose the converter with voltage selector jumpers, with 4 pins on one side in the following order: Vout, GND, Vin, EN. Cut the default jumper to the adj. potentiometer, bridge the 3.3V jumper with solder.
+https://www.ebay.com/itm/201707958768
+
+
+Simple parts:
+
+DAQ Board: 
+All resistors: SMD 0805, choose a value of the following:
+220 Ohm, 330 Ohm, 470 Ohm, or 1k Ohm
+
+Capacitors: 0.1 uf SMD 0805 for signal lines, 10 uf SMD 1812 for power input
+
+Diodes (at power input): SMD 1206, low drop (Schottky)
+
+Inductance (at 3.3V line after always-on buck converter): just put a jumper or use a very low value, like  1 uH suitable for 900mA or more
+
+Base Board: using example of Side 3 , and expand the same to other sides. In addition to the components listed above.
+All resistors SMD 0805
+R4, R5, R11, R12: 100R 1% or better - affects read values!
+C2, C5: 1nF - higher value gives more stable reading, but increased lag
+If you want to fine-tune the readings, it is best to calculate the resistor-capacitor
+
+R13: 20k
+R14: 8.2k (R13 and R14 form the resistor divider for feedback voltage control)
+R1: 10k (pull-up for 10k thermistor)
+R2: 330R DATA rate Digital pull-up
+R3: 10k NTC thermistor
+
+Capacitors SMD 0805:
+C1, C3, C4, C6: 100nF filter caps
+C8, C9: 10uF for power filtering
